@@ -10,7 +10,7 @@
 
   <groupId>org.sonarsource.python</groupId>
   <artifactId>python</artifactId>
-  <version>4.21-SNAPSHOT</version>
+  <version>4.21-CODESCAN</version>
   <packaging>pom</packaging>
 
   <name>Python</name>
@@ -83,7 +83,7 @@
     <skip.its>true</skip.its>
 
     <!-- versions -->
-    <commons.io.version>2.8.0</commons.io.version>
+    <commons.io.version>2.17.0</commons.io.version>
     <commons.lang.version>2.6</commons.lang.version>
     <assertj-core.version>3.23.1</assertj-core.version>
     <junit.version>5.9.3</junit.version>
@@ -286,4 +286,15 @@
       </properties>
     </profile>
   </profiles>
+
+  <distributionManagement>
+    <repository>
+      <id>libs-release</id>
+      <url>https://artifactory.autorabit.com/artifactory/libs-release</url>
+    </repository>
+    <snapshotRepository>
+      <id>libs-snapshots</id>
+      <url>https://artifactory.autorabit.com/artifactory/libs-snapshot</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
